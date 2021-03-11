@@ -24,14 +24,14 @@ for i, j, k in product(range(4), repeat=3):
 a_func = lambdify((t, r, theta, phi, M, v_0, v_1, v_2, v_3), a_list)
 a = lambda x, v: np.array(a_func(x[0], x[1], x[2], x[3], 1, v[0], v[1], v[2], v[3]))
 
-N = 10**5 #計算ステップ数
+N = 10**6 #計算ステップ数
 x = np.array([0.0, 17.32050808,  0.95531662, -0.78539816]) 
 #初期位置は適当に決める。M=1がSchwarzschild半径なのでrはそれよりは大きくする
 v = np.array([1, -0.02886728, -0.00824957,  0.01750001]) 
 #t=0付近で\tau=tと選ぶとdt/d\tau = 1なので時間成分の速さは1にする
 # 空間成分の速度は適当。
 
-dtau = 0.1 #1ステップごとに進む\tau幅
+dtau = 0.01 #1ステップごとに進む\tau幅
 R = [] 
 Theta = []
 Phi = []
