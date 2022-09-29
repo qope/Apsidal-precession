@@ -1,4 +1,4 @@
-# このnotebookは？
+# Apsidal-precession
 
 重力場中の質点の軌道(測地線)の数値計算ができます。
 Schwarzschild計量とKerr計量の場合を実装していますが、それ以外の計量でも計算できます。
